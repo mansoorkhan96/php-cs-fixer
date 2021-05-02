@@ -23,4 +23,4 @@ This extension contributes the following settings:
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
-Credits: It is a forked version from an outdated extension here: [here](https://marketplace.visualstudio.com/items?itemName=fterrag.vscode-php-cs-fixer)
+Credits: It is a forked version from an outdated extension [here](https://marketplace.visualstudio.com/items?itemName=fterrag.vscode-php-cs-fixer)
