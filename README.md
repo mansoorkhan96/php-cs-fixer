@@ -20,7 +20,7 @@ This extension contributes the following settings:
 * `php-cs-fixer.useCache`: Use a cache file when fixing files (--using-cache) (default: false)
 * `php-cs-fixer.allowRisky`: Determines whether risky rules are allowed (--allow-risky) (default: false)
 * `php-cs-fixer.config`: Path to a .php_cs file (--config) (default: "")
-* `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR1,@PSR2,@Symfony,-yoda_style")
+* `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
 Credits: It is a forked version from an outdated extension [here](https://marketplace.visualstudio.com/items?itemName=fterrag.vscode-php-cs-fixer)
