@@ -2,7 +2,8 @@
     "name": "php-cs-fixer",
     "displayName": "PHP CS Fixer",
     "description": "Support for php-cs-fixer in Visual Studio Code",
-    "version": "0.0.1",
+    "icon": "icon.png",
+    "version": "0.0.3",
     "publisher": "mansoorkhan96",
     "engines": {
         "vscode": "^1.18.0"
@@ -12,7 +13,9 @@
         "url": "https://github.com/mansoorkhan96/php-cs-fixer"
     },
     "categories": [
-        "Formatters"
+        "Formatters",
+        "Linters",
+        "Other"
     ],
     "keywords": [
         "PHP",

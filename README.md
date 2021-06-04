@@ -2,7 +2,7 @@
 
 This extension adds support for running `php-cs-fixer fix` on PHP files in Visual Studio Code. This extension supports `PHP8` syntax and `PSR12` style to fix PHP files.
 
-![demo](demo.gif)
+![demo](simple-demo.gif)
 
 ## Getting Started
 
