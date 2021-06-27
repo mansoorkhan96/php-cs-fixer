@@ -93,4 +93,4 @@ return $config
     ->setLineEnding("\r\n");
 ```
 
-Learn more about `.php-cs-fixer.php` [confile file](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/doc/config.rst) and [adding custom rules](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/doc/ruleSets/index.rst) for config file.
+Learn more about `.php-cs-fixer.php` [config file](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/doc/config.rst) and [adding custom rules](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/3.0/doc/ruleSets/index.rst) for config file.
