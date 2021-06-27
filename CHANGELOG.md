@@ -17,3 +17,7 @@ All notable changes to the "php-cs-fixer" extension will be documented in this f
 ## 0.0.4
 
 - Fix `.php_cs` config file issue
+
+## 0.0.5
+
+- Update `php-cs-fixer` to v3 🤩😎

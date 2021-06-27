@@ -3,7 +3,7 @@
     "displayName": "PHP CS Fixer",
     "description": "Support for php-cs-fixer in Visual Studio Code",
     "icon": "icon.png",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "mansoorkhan96",
     "engines": {
         "vscode": "^1.18.0"
