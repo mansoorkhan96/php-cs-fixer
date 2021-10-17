@@ -1,9 +1,9 @@
 {
     "name": "php-cs-fixer",
     "displayName": "PHP CS Fixer",
-    "description": "Support for php-cs-fixer in Visual Studio Code",
+    "description": "PHP CS Fixer extension for VS Code with zero config",
     "icon": "icon.png",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "mansoorkhan96",
     "engines": {
         "vscode": "^1.18.0"
@@ -22,7 +22,12 @@
         "PHP formatter",
         "PHP format",
         "phpfmt",
-        "php-cs-fixer"
+        "php cs fixer",
+        "PHP prettier",
+        "Prettier for PHP",
+        "Laravel",
+        "Symfony",
+        "prettier"
     ],
     "activationEvents": [
         "onLanguage:php"
