@@ -24,7 +24,12 @@ All notable changes to the "php-cs-fixer" extension will be documented in this f
 
 ## 0.0.6
 
-- Update `php-cs-fixer` to v3.2.1 🤩😎
+- Update `php-cs-fixer` to `v3.2.1` 🚀
 - Update Readme
 - Add instructions for usage with Laravel Sail (Dockerized Laravel Projects)
 - Branding (New logo)
+
+## 0.0.7
+
+- Update `php-cs-fixer` to v3.6.0 🤩😎
+- Update Readme
