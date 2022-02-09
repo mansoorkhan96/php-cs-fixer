@@ -1,4 +1,4 @@
-<img src="icon-thumb.png" style="display: block;margin-left: auto;margin-right: auto;"/>
+<div align="center"><img src="icon-thumb.png"/></div>
 
 <div align="center"><h1>PHP CS Fixer (php-cs-fixer)</h1></div>
 
