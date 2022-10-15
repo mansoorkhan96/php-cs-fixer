@@ -12,7 +12,14 @@ function formatDocument(document) {
     let toolPath = getConfig('toolPath');
     let filename = document.fileName;
     let args = [];
-    let opts = { cwd: path.dirname(filename) };
+
+    let opts = {
+        cwd: path.dirname(filename),
+    };
+
+    if (getConfig('ignoreEnv')) {
+        opts.PHP_CS_FIXER_IGNORE_ENV = 1
+    }
 
     if (!toolPath) {
         toolPath = vscode.extensions.getExtension('mansoorkhan96.php-cs-fixer').extensionPath + '/php-cs-fixer';
@@ -61,7 +68,7 @@ function formatDocument(document) {
 
     // console.log('php-cs-fixer temporary file: ' + tmpFile.name);
 
-    return new Promise(function(resolve) {
+    return new Promise(function (resolve) {
         cp.execFile('php', [...args, tmpFile.name], opts, function (err) {
             if (err) {
                 tmpFile.removeCallback();
@@ -84,11 +91,11 @@ function formatDocument(document) {
 }
 
 function registerDocumentProvider(document, options) {
-    return new Promise(function(resolve, reject) {
-        formatDocument(document).then(function(text) {
+    return new Promise(function (resolve, reject) {
+        formatDocument(document).then(function (text) {
             const range = new vscode.Range(new vscode.Position(0, 0), document.lineAt(document.lineCount - 1).range.end);
             resolve([new vscode.TextEdit(range, text)]);
-        }).catch(function(err) {
+        }).catch(function (err) {
             reject();
         });
     });
@@ -103,14 +110,14 @@ function activate(context) {
         vscode.commands.executeCommand('editor.action.formatDocument');
     }));
 
-    context.subscriptions.push(vscode.workspace.onWillSaveTextDocument(function(event) {
+    context.subscriptions.push(vscode.workspace.onWillSaveTextDocument(function (event) {
         if (event.document.languageId === 'php' && getConfig('fixOnSave') && vscode.workspace.getConfiguration('editor', null).get('formatOnSave') == false) {
             event.waitUntil(vscode.commands.executeCommand('editor.action.formatDocument'));
         }
     }));
 
     context.subscriptions.push(vscode.languages.registerDocumentFormattingEditProvider('php', {
-        provideDocumentFormattingEdits: function(document, options) {
+        provideDocumentFormattingEdits: function (document, options) {
             return registerDocumentProvider(document, options);
         }
     }));
