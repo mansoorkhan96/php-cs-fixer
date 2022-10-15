@@ -1,8 +1,10 @@
-<div align="center"><img src="icon-thumb.png"/></div>
+<div align="center">
+    <img width="150px" height="150px" src="icon.png"/>
+</div>
 
 <div align="center"><h1>PHP CS Fixer (php-cs-fixer)</h1></div>
 
-PHP CS Fixer (Prettier for PHP) extension for PHP developers. This extension requires almost zero configuration to format `.php` files. It uses `v3.6.0` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable.
+PHP CS Fixer (Prettier for PHP) extension for PHP developers. This extension requires almost zero configuration to format `.php` files. It uses `v3.12.0` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable.
 
 ![demo](simple-demo.gif)
 
@@ -23,7 +25,7 @@ This extension contributes the following settings:
 
 ### Need to use a custom `php-cs-fixer.phar` file?
 
-The extension uses `v3.6.0` of [cs.symfony.com](https://cs.symfony.com/) by default but you can easily override it with a new or old file. Download the required file version from above link and provide the file path to the extension.
+The extension uses `v3.12.0` of [cs.symfony.com](https://cs.symfony.com/) by default but you can easily override it with a new or old file. Download the required file version from above link and provide the file path to the extension.
 
 Open `settings.json` file (Ctrl + Shift + P) and add the following setting:
 
