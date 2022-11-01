@@ -56,6 +56,8 @@ function formatDocument(document) {
         }
 
         args.push('--config=' + config);
+    } else if (projectConfigFile()) {
+        args.push('--config=' + projectConfigFile());
     } else {
         let rules = getConfig('rules');
         if (rules) {
@@ -65,8 +67,6 @@ function formatDocument(document) {
 
     const tmpFile = tmp.fileSync();
     fs.writeFileSync(tmpFile.name, document.getText(null));
-
-    // console.log('php-cs-fixer temporary file: ' + tmpFile.name);
 
     return new Promise(function (resolve) {
         cp.execFile('php', [...args, tmpFile.name], opts, function (err) {
@@ -88,6 +88,24 @@ function formatDocument(document) {
             resolve(text);
         });
     });
+}
+
+function getProjectRoot() {
+    return vscode.workspace.getWorkspaceFolder(
+        vscode.window.activeTextEditor.document.uri
+    ).uri.fsPath;
+}
+
+function projectConfigFile() {
+    if (fs.existsSync(getProjectRoot() + path.sep + '.php-cs-fixer.php')) {
+        return getProjectRoot() + path.sep + '.php-cs-fixer.php'
+    }
+
+    if (fs.existsSync(getProjectRoot() + path.sep + 'php-cs-fixer.dist.php')) {
+        return getProjectRoot() + path.sep + 'php-cs-fixer.dist.php'
+    }
+
+    return null
 }
 
 function registerDocumentProvider(document, options) {
