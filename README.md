@@ -2,15 +2,11 @@
     <img width="150px" height="150px" src="icon.png"/>
 </div>
 
-<div align="center"><h1>PHP CS Fixer (php-cs-fixer)</h1></div>
+<div align="center"><h1>PHP CS Fixer (Prettier for PHP)</h1></div>
 
-PHP CS Fixer (Prettier for PHP) extension for PHP developers. This extension requires almost zero configuration to format `.php` files. It uses `v3.12.0` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable.
+This extension requires almost zero configuration to format `.php` files. It uses `v3.13.0` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable. As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
 
 ![demo](simple-demo.gif)
-
-## Getting Started
-
-As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
 
 ## Extension Optional Settings
 
@@ -19,13 +15,13 @@ This extension contributes the following settings:
 * `php-cs-fixer.toolPath`: The path to the php-cs-fixer tool (default: "")
 * `php-cs-fixer.useCache`: Use a cache file when fixing files (--using-cache) (default: false)
 * `php-cs-fixer.allowRisky`: Determines whether risky rules are allowed (--allow-risky) (default: false)
-* `php-cs-fixer.config`: Path to a .php-cs-fixer.php file (--config) (default: "")
+* `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/php-cs-fixer.dist.php")
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
 ### Need to use a custom `php-cs-fixer.phar` file?
 
-The extension uses `v3.12.0` of [cs.symfony.com](https://cs.symfony.com/) by default but you can easily override it with a new or old file. Download the required file version from above link and provide the file path to the extension.
+[Download](https://cs.symfony.com/) the required file version from above link and provide the file path to the extension.
 
 Open `settings.json` file (Ctrl + Shift + P) and add the following setting:
 
@@ -39,9 +35,11 @@ On Windows:
 "php-cs-fixer.toolPath": "C:\\Users\\username\\.vscode\\php-cs-fixer.phar",
 ```
 
-### Need to use a custom `.php-cs-fixer.php` rules file?
+### Config File
 
-PHP CS Fixer formats `.php` files using a set of rules defined in a file. The extension uses `PSR12` as defualt rule set. If you need to change this behavour, simply create a custom `.php-cs-fixer.php` config file and add rules of your choice. After creating the file you need to provide file path to the extension.
+This extension formats `.php` files based on specified rules. Commonly these rules are defined in a `php-cs-fixer.dist.php` OR `.php-cs-fixer.php` config file inside your project root path. The extension would try to pick a config file with above filenames, if not found it uses default rules.
+
+You can also define a `global` config file which can be used accross all projects.
 
 Open `settings.json` file (Ctrl + Shift + P) and add the following setting:
 
@@ -57,7 +55,7 @@ On Windows:
 
 #### Not sure which rules to add?
 
-Try out my `.php-cs-fixer.php` config file that I use in my projects. Try to remove a rule and observe the changes in file formatting.
+Try out following config rules. Try to remove a rule and observe the changes.
 
 ```php
 <?php
@@ -100,4 +98,4 @@ return $config
     ->setLineEnding("\n");
 ```
 
-Find complete rule set [here](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/ruleSets/index.rst)
+You can find the complete rule set [here](https://github.com/FriendsOfPHP/PHP-CS-Fixer/blob/master/doc/ruleSets/index.rst)
