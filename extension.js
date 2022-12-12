@@ -101,8 +101,8 @@ function projectConfigFile() {
         return getProjectRoot() + path.sep + '.php-cs-fixer.php'
     }
 
-    if (fs.existsSync(getProjectRoot() + path.sep + 'php-cs-fixer.dist.php')) {
-        return getProjectRoot() + path.sep + 'php-cs-fixer.dist.php'
+    if (fs.existsSync(getProjectRoot() + path.sep + '.php-cs-fixer.dist.php')) {
+        return getProjectRoot() + path.sep + '.php-cs-fixer.dist.php'
     }
 
     return null

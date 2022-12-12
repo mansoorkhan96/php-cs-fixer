@@ -15,7 +15,7 @@ This extension contributes the following settings:
 * `php-cs-fixer.toolPath`: The path to the php-cs-fixer tool (default: "")
 * `php-cs-fixer.useCache`: Use a cache file when fixing files (--using-cache) (default: false)
 * `php-cs-fixer.allowRisky`: Determines whether risky rules are allowed (--allow-risky) (default: false)
-* `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/php-cs-fixer.dist.php")
+* `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/.php-cs-fixer.dist.php")
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
@@ -37,7 +37,7 @@ On Windows:
 
 ### Config File
 
-This extension formats `.php` files based on specified rules. Commonly these rules are defined in a `php-cs-fixer.dist.php` OR `.php-cs-fixer.php` config file inside your project root path. The extension would try to pick a config file with above filenames, if not found it uses default rules.
+This extension formats `.php` files based on specified rules. Commonly these rules are defined in a `.php-cs-fixer.dist.php` OR `.php-cs-fixer.php` config file inside your project root path. The extension would try to pick a config file with above filenames, if not found it uses default rules.
 
 You can also define a `global` config file which can be used accross all projects.
 
