@@ -15,11 +15,17 @@ This extension contributes the following settings:
 * `php-cs-fixer.toolPath`: The path to the php-cs-fixer tool (default: "")
 * `php-cs-fixer.useCache`: Use a cache file when fixing files (--using-cache) (default: false)
 * `php-cs-fixer.allowRisky`: Determines whether risky rules are allowed (--allow-risky) (default: false)
-* `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/php-cs-fixer.dist.php")
+* `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/.php-cs-fixer.dist.php")
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
-### Need to use a custom `php-cs-fixer.phar` file?
+### Adding PHP CS Fixer from a composer dependency
+
+You can require [PHP CS Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) as composer dependency in your project and the extension will load it automatically for you.
+
+If extension could not find/load the binary from `/vendor/bin/php-cs-fixer`, it would default to the binary included in extension.
+
+### Manually adding PHP CS Fixer binary file?
 
 [Download](https://cs.symfony.com/) the required file version from above link and provide the file path to the extension.
 
@@ -37,7 +43,7 @@ On Windows:
 
 ### Config File
 
-This extension formats `.php` files based on specified rules. Commonly these rules are defined in a `php-cs-fixer.dist.php` OR `.php-cs-fixer.php` config file inside your project root path. The extension would try to pick a config file with above filenames, if not found it uses default rules.
+This extension formats `.php` files based on specified rules. Commonly these rules are defined in a `.php-cs-fixer.dist.php` OR `.php-cs-fixer.php` config file inside your project root path. The extension would try to pick a config file with above filenames, if not found it uses default rules.
 
 You can also define a `global` config file which can be used accross all projects.
 

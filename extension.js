@@ -21,6 +21,10 @@ function formatDocument(document) {
         opts.PHP_CS_FIXER_IGNORE_ENV = 1
     }
 
+    if (getFixerFromComposer()) {
+        toolPath = getFixerFromComposer()
+    }
+
     if (!toolPath) {
         toolPath = vscode.extensions.getExtension('mansoorkhan96.php-cs-fixer').extensionPath + '/php-cs-fixer';
     }
@@ -96,13 +100,23 @@ function getProjectRoot() {
     ).uri.fsPath;
 }
 
+function getFixerFromComposer() {
+    let composerPath = getProjectRoot() + path.sep + 'vendor' + path.sep + 'bin' + path.sep + 'php-cs-fixer'
+
+    if (fs.existsSync(composerPath)) {
+        return composerPath
+    }
+
+    return null
+}
+
 function projectConfigFile() {
     if (fs.existsSync(getProjectRoot() + path.sep + '.php-cs-fixer.php')) {
         return getProjectRoot() + path.sep + '.php-cs-fixer.php'
     }
 
-    if (fs.existsSync(getProjectRoot() + path.sep + 'php-cs-fixer.dist.php')) {
-        return getProjectRoot() + path.sep + 'php-cs-fixer.dist.php'
+    if (fs.existsSync(getProjectRoot() + path.sep + '.php-cs-fixer.dist.php')) {
+        return getProjectRoot() + path.sep + '.php-cs-fixer.dist.php'
     }
 
     return null
