@@ -42,3 +42,8 @@ All notable changes to the "php-cs-fixer" extension will be documented in this f
 
 - Support `WorkspaceFolder/.php-cs-fixer.php` OR `WorkspaceFolder/.php-cs-fixer.dist.php`
 - Update `php-cs-fixer.phar` to v3.13.0
+
+## 1.0.1
+
+- Support `php-cs-fixer` as a composer dependencies
+- Fix spell mistake by replacing `php-cs-fixer.dist.php` to `.php-cs-fixer.dist.php`

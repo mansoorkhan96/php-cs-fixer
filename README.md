@@ -19,7 +19,13 @@ This extension contributes the following settings:
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 
-### Need to use a custom `php-cs-fixer.phar` file?
+### Adding PHP CS Fixer from a composer dependency
+
+You can require [PHP CS Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) as composer dependency in your project and the extension will load it automatically for you.
+
+If extension could not find/load the binary from `/vendor/bin/php-cs-fixer`, it would default to the binary included in extension.
+
+### Manually adding PHP CS Fixer binary file?
 
 [Download](https://cs.symfony.com/) the required file version from above link and provide the file path to the extension.
 
