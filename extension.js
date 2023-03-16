@@ -143,7 +143,7 @@ function activate(context) {
     }));
 
     context.subscriptions.push(vscode.workspace.onWillSaveTextDocument(function (event) {
-        if (event.document.languageId === 'php' && getConfig('fixOnSave') && vscode.workspace.getConfiguration('editor', null).get('formatOnSave') == false) {
+        if (event.document.languageId === 'php' && getConfig('fixOnSave')) {
             event.waitUntil(vscode.commands.executeCommand('editor.action.formatDocument'));
         }
     }));
