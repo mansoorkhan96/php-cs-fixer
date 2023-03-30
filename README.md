@@ -4,7 +4,7 @@
 
 <div align="center"><h1>PHP CS Fixer (Prettier for PHP)</h1></div>
 
-This extension requires almost zero configuration to format `.php` files. It uses `v3.13.0` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable. As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
+This extension requires almost zero configuration to format `.php` files. It uses `v3.15.1` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable. As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
 
 ![demo](simple-demo.gif)
 
