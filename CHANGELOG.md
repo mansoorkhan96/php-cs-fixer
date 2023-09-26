@@ -52,3 +52,8 @@ All notable changes to the "php-cs-fixer" extension will be documented in this f
 
 - Bug fixed by @sanketgandhi876
 - Update `php-cs-fixer.phar` to v3.15.1
+
+## 1.0.3
+
+- Introducing `php-cs-fixer.preset` option, which allows to use presets like Laravel Pint
+- Update `php-cs-fixer.phar` to v3.28.0
