@@ -10,6 +10,7 @@ function formatDocument(document) {
   }
 
   let toolPath = getConfig("toolPath");
+  let phpCmd = getConfig("phpCmd");
   let filename = document.fileName;
   let args = [];
 
@@ -27,6 +28,10 @@ function formatDocument(document) {
 
   if (!toolPath) {
     toolPath = path.resolve(__dirname, "php-cs-fixer");
+  }
+
+  if (!phpCmd) {
+    phpCmd = "php";
   }
 
   args.push(toolPath);
@@ -78,7 +83,7 @@ function formatDocument(document) {
   fs.writeFileSync(tmpFile.name, document.getText(null));
 
   return new Promise(function (resolve) {
-    cp.execFile("php", [...args, tmpFile.name], opts, function (err) {
+    cp.execFile(phpCmd, [...args, tmpFile.name], opts, function (err) {
       if (err) {
         tmpFile.removeCallback();
 
