@@ -19,6 +19,7 @@ This extension contributes the following settings:
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
 * `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 * `php-cs-fixer.preset`: Use a preset from: laravel, PER, PSR12, symfony. You should remove it if you want to use a config file.
+* `php-cs-fixer.phpCmd`: Specify path to PHP command (default: "php").
 
 ### Adding PHP CS Fixer from a composer dependency
 
@@ -58,6 +59,14 @@ On Windows:
 
 ```json
 "php-cs-fixer.config": "C:\\Users\\username\\.vscode\\.php-cs-fixer.php"
+```
+
+### Path to PHP Command
+
+You can specify path to PHP Command using the config.
+
+```json
+"php-cs-fixer.phpCmd": "/Users/mansoor/Library/Application Support/Herd/bin/php",
 ```
 
 #### Not sure which rules to add?
