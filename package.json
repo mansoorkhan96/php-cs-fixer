@@ -49,6 +49,11 @@
                     "default": "",
                     "description": "The path to the php-cs-fixer tool"
                 },
+                "php-cs-fixer.phpCmd": {
+                    "type": "string",
+                    "default": "",
+                    "description": "The command to use as the php executable to run php-cs-fixer with. Defaults to just 'php'."
+                },
                 "php-cs-fixer.useCache": {
                     "type": "boolean",
                     "default": false,
