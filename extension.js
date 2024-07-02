@@ -16,6 +16,7 @@ function formatDocument(document) {
 
   let opts = {
     cwd: path.dirname(filename),
+    shell: true,
   };
 
   if (getConfig("ignoreEnv")) {
