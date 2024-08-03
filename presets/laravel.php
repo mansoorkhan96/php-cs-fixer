@@ -4,7 +4,8 @@ require 'configure_preset.php';
 
 return configurePreset([
     'array_indentation' => true,
-    'array_syntax' => ['syntax' => 'short'], 'binary_operator_spaces' => [
+    'array_syntax' => ['syntax' => 'short'],
+    'binary_operator_spaces' => [
         'default' => 'single_space',
     ],
     'blank_line_after_namespace' => true,
@@ -17,11 +18,7 @@ return configurePreset([
     ],
     'blank_line_between_import_groups' => true,
     'blank_lines_before_namespace' => true,
-    'control_structure_braces' => true,
-    'control_structure_continuation_position' => [
-        'position' => 'same_line',
-    ],
-    'curly_braces_position' => [
+    'braces_position' => [
         'control_structures_opening_brace' => 'same_line',
         'functions_opening_brace' => 'next_line_unless_newline_at_signature_end',
         'anonymous_functions_opening_brace' => 'same_line',
@@ -45,17 +42,21 @@ return configurePreset([
         'single_line' => true,
     ],
     'clean_namespace' => true,
-    'compact_nullable_typehint' => true,
+    'compact_nullable_type_declaration' => true,
     'concat_space' => [
         'spacing' => 'none',
     ],
     'constant_case' => ['case' => 'lower'],
+    'control_structure_braces' => true,
+    'control_structure_continuation_position' => [
+        'position' => 'same_line',
+    ],
     'declare_equal_normalize' => true,
     'declare_parentheses' => true,
     'elseif' => true,
     'encoding' => true,
     'full_opening_tag' => true,
-    'fully_qualified_strict_types' => true,
+    'fully_qualified_strict_types' => false,
     'function_declaration' => true,
     'general_phpdoc_tag_rename' => true,
     'heredoc_to_nowdoc' => true,
@@ -80,7 +81,11 @@ return configurePreset([
         'strategy' => 'no_multi_line',
     ],
     'native_function_casing' => true,
-    'native_function_type_declaration_casing' => true,
+    'native_type_declaration_casing' => true,
+    'new_with_parentheses' => [
+        'named_class' => false,
+        'anonymous_class' => false,
+    ],
     'no_alias_functions' => true,
     'no_alias_language_construct_call' => true,
     'no_alternative_syntax' => true,
@@ -121,7 +126,7 @@ return configurePreset([
     'no_unneeded_control_parentheses' => [
         'statements' => ['break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'],
     ],
-    'no_unneeded_curly_braces' => true,
+    'no_unneeded_braces' => true,
     'no_unreachable_default_argument_value' => true,
     'no_unset_cast' => true,
     'no_unused_imports' => true,
@@ -131,13 +136,17 @@ return configurePreset([
     'normalize_index_brace' => true,
     'not_operator_with_successor_space' => true,
     'nullable_type_declaration' => true,
-    'nullable_type_declaration_for_default_null_value' => [
-        'use_nullable_type_declaration' => false,
-    ],
+    'nullable_type_declaration_for_default_null_value' => true,
     'object_operator_without_whitespace' => true,
     'ordered_imports' => ['sort_algorithm' => 'alpha', 'imports_order' => ['const', 'class', 'function']],
     'ordered_interfaces' => true,
     'ordered_traits' => true,
+    'phpdoc_align' => [
+        'align' => 'left',
+        'spacing' => [
+            'param' => 2,
+        ],
+    ],
     'phpdoc_indent' => true,
     'phpdoc_inline_tag_normalizer' => true,
     'phpdoc_no_access' => true,
@@ -182,6 +191,7 @@ return configurePreset([
     'single_line_comment_style' => [
         'comment_types' => ['hash'],
     ],
+    'single_line_empty_body' => true,
     'single_quote' => true,
     'single_space_around_construct' => true,
     'space_after_semicolon' => true,
