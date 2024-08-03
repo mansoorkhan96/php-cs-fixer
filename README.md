@@ -4,7 +4,7 @@
 
 <div align="center"><h1>VsCode PHP CS Fixer</h1></div>
 
-This extension requires almost zero configuration to format `.php` files. It uses `v3.59.3` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable. As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
+This extension requires almost zero configuration to format `.php` files. It uses `v3.61.1` of [cs.symfony.com](https://cs.symfony.com/) by default but that's easily replaceable. As long as PHP 7+ is installed on your system and in your PATH, the extension should work out of the box.
 
 ![demo](simple-demo.gif)
 
@@ -17,7 +17,6 @@ This extension contributes the following settings:
 * `php-cs-fixer.allowRisky`: Determines whether risky rules are allowed (--allow-risky) (default: false)
 * `php-cs-fixer.config`: Path to a config file (--config) (default: "WorkspaceFolder/.php-cs-fixer.php" OR "WorkspaceFolder/.php-cs-fixer.dist.php")
 * `php-cs-fixer.rules`: Rules to use when fixing files (--rules) (default: "@PSR12,@PSR1,@PSR2,@Symfony,-yoda_style")
-* `php-cs-fixer.fixOnSave`: Runs fix command on save (default: true)
 * `php-cs-fixer.preset`: Use a preset from: laravel, PER, PSR12, symfony. You should remove it if you want to use a config file.
 * `php-cs-fixer.phpCmd`: Specify path to PHP command (default: "php").
 

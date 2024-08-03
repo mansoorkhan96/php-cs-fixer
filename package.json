@@ -74,11 +74,6 @@
                     "default": "@PSR1,@PSR2,@Symfony,-yoda_style",
                     "description": "Rules to use when fixing files (--rules)"
                 },
-                "php-cs-fixer.fixOnSave": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Runs fix command on save"
-                },
                 "php-cs-fixer.preset": {
                     "type": "string",
                     "default": "",
