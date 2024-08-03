@@ -8,6 +8,16 @@ This extension requires almost zero configuration to format `.php` files. It use
 
 ![demo](simple-demo.gif)
 
+# Installation
+
+Simply install the extension from marketplace and add it as the default formatter for PHP. In your settings.json file add/update following.
+
+```json
+"[php]": {
+    "editor.defaultFormatter": "mansoorkhan96.php-cs-fixer"
+}
+```
+
 ## Extension Optional Settings
 
 This extension contributes the following settings:
