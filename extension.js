@@ -186,7 +186,7 @@ function activate(context) {
 
     context.subscriptions.push(
         vscode.workspace.onWillSaveTextDocument(function (event) {
-            if (event.document.languageId === "php") {
+            if (event.document.languageId === 'php' && getConfig('fixOnSave')) {
                 event.waitUntil(
                     vscode.commands.executeCommand("editor.action.formatDocument")
                 );
