@@ -74,7 +74,7 @@ function formatDocument(document) {
     } else {
         let rules = getConfig('rules')
         if (rules) {
-            args.push('--rules=' + rules)
+            args.push(`--rules='${rules}'`)
         }
     }
 

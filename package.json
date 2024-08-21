@@ -3,7 +3,7 @@
     "displayName": "PHP CS Fixer",
     "description": "PHP CS Fixer extension for VS Code with zero config",
     "icon": "icon.png",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "publisher": "mansoorkhan96",
     "engines": {
         "vscode": "^1.18.0"
