@@ -16,7 +16,7 @@ function formatDocument(document) {
 
     let opts = {
         cwd: path.dirname(filename),
-        shell: true,
+        shell: false,
     }
 
     if (getConfig('ignoreEnv')) {
@@ -74,7 +74,7 @@ function formatDocument(document) {
     } else {
         let rules = getConfig('rules')
         if (rules) {
-            args.push(`--rules='${rules}'`)
+            args.push(`--rules=${rules}`)
         }
     }
 
