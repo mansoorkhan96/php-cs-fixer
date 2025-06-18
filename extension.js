@@ -20,7 +20,7 @@ function formatDocument(document) {
     }
 
     if (getConfig('ignoreEnv')) {
-        opts.env = { PHP_CS_FIXER_IGNORE_ENV: 1 }
+        opts.env = { ...process.env, PHP_CS_FIXER_IGNORE_ENV: 1 }
     }
 
     if (getFixerFromComposer()) {

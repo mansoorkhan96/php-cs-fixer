@@ -49,6 +49,11 @@
                     "default": "",
                     "description": "The path to the php-cs-fixer tool"
                 },
+                "php-cs-fixer.ignoreEnv": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Ignore php-cs-fixer tool environment requirements"
+                },
                 "php-cs-fixer.phpCmd": {
                     "type": "string",
                     "default": "",
