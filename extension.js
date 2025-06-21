@@ -16,11 +16,11 @@ function formatDocument(document) {
 
     let opts = {
         cwd: path.dirname(filename),
-        shell: true,
+        shell: false,
     }
 
     if (getConfig('ignoreEnv')) {
-        opts.env = { PHP_CS_FIXER_IGNORE_ENV: 1 }
+        opts.env = { ...process.env, PHP_CS_FIXER_IGNORE_ENV: 1 }
     }
 
     if (getFixerFromComposer()) {
@@ -74,7 +74,7 @@ function formatDocument(document) {
     } else {
         let rules = getConfig('rules')
         if (rules) {
-            args.push(`--rules='${rules}'`)
+            args.push(`--rules=${rules}`)
         }
     }
 

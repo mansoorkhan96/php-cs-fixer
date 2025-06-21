@@ -3,7 +3,7 @@
     "displayName": "PHP CS Fixer",
     "description": "PHP CS Fixer extension for VS Code with zero config",
     "icon": "icon.png",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "publisher": "mansoorkhan96",
     "engines": {
         "vscode": "^1.18.0"
@@ -48,6 +48,11 @@
                     "type": "string",
                     "default": "",
                     "description": "The path to the php-cs-fixer tool"
+                },
+                "php-cs-fixer.ignoreEnv": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Ignore php-cs-fixer tool environment requirements"
                 },
                 "php-cs-fixer.phpCmd": {
                     "type": "string",
